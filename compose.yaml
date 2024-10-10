@@ -1,0 +1,42 @@
+networks:
+  web3:
+    driver: bridge
+
+services:
+  security-backend:
+    image: security-backend:latest
+    container_name: security-backend
+    ports:
+      - 8083:8083
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://clientdb:5432/clientdb
+      - POSTGRES_USER=${DB_USER:-postgres}
+      - POSTGRES_PASSWORD=${DB_PASSWORD:-sa}
+      - eureka.client.serviceUrl.defaultZone=http://eureka-server:8761/eureka/
+    networks:
+      - web3
+
+  clientdb:
+    image: postgres:14.9
+    container_name: postgres
+    environment:
+      - POSTGRES_DB=clientdb
+      - POSTGRES_USER=${DB_USER:-postgres}
+      - POSTGRES_PASSWORD=${DB_PASSWORD:-sa}
+    ports:
+      - 5433:5432
+    volumes:
+      - ./data/db-data:/data/postgres
+    networks:
+      - web3
+
+  eureka-server:
+    image: eureka-server:latest
+    container_name: eureka-server
+    ports:
+      - 8761:8761
+    networks:
+      - web3
+    environment:
+      eureka.instance.hostname: eureka-server
+      eureka.client.serviceUrl.defaultZone: http://eureka-server:8761/eureka
