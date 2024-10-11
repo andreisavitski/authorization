@@ -1,7 +1,7 @@
 server:
   port: 8083
   servlet:
-    context-path: /security
+    context-path: /authorization
 
 spring:
 
@@ -21,7 +21,7 @@ spring:
     show-sql: false
 
 application:
-  name: security
+  name: authorization
 
 token:
   signing:

@@ -1,4 +1,4 @@
-package eu.senla.security.controller.controlleradvice;
+package eu.senla.security.controller.advice;
 
 import eu.senla.security.dto.exception.ErrorResponseDto;
 import eu.senla.security.exception.ApplicationException;

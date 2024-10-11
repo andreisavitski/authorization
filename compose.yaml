@@ -3,9 +3,9 @@ networks:
     driver: bridge
 
 services:
-  security-backend:
-    image: security-backend:latest
-    container_name: security-backend
+  authorization-backend:
+    image: authorization-backend:latest
+    container_name: authorization-backend
     ports:
       - 8083:8083
     environment:
@@ -23,6 +23,7 @@ services:
       - POSTGRES_DB=clientdb
       - POSTGRES_USER=${DB_USER:-postgres}
       - POSTGRES_PASSWORD=${DB_PASSWORD:-sa}
+#      - PGDATA=./data/db-data:/data/postgres
     ports:
       - 5433:5432
     volumes:

@@ -26,10 +26,15 @@ import static eu.senla.security.exception.ApplicationError.THE_CLIENT_EXISTS;
 public class ClientServiceImpl implements ClientService {
 
     private final ClientRepository clientRepository;
+
     private final ClientMapper clientMapper;
+
     private final PasswordEncoder passwordEncoder;
+
     private final JwtService jwtService;
+
     private final AuthenticationManager authenticationManager;
+
     private final ClientDetailService clientDetailService;
 
     @Override

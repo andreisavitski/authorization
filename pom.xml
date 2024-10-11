@@ -8,10 +8,10 @@
         <version>3.3.4</version>
         <relativePath/>
     </parent>
-    <groupId>eu.senla.security</groupId>
-    <artifactId>security</artifactId>
+    <groupId>eu.senla.authorization</groupId>
+    <artifactId>authorization</artifactId>
     <version>0.0.1</version>
-    <name>security</name>
+    <name>authorization</name>
     <url/>
 
     <properties>
