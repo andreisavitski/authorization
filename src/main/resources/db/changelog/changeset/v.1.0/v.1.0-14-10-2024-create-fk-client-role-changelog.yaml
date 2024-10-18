@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: v.1.0-6-create-fk-client-role
+      author: andrei_savitski
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: role_id
+            baseTableName: client
+            constraintName: fk-client-role
+            referencedColumnNames: id
+            referencedTableName: role

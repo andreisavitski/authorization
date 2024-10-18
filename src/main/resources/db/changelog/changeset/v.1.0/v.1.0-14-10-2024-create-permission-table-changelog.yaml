@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: v.1.0-1-create-permission
+      author: andrei_savitski
+      changes:
+        - createTable:
+            tableName: permission
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    unique: true
+                    nullable: false
