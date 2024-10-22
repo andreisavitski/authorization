@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: v.1.0-8-insert-role
+      author: andrei_savitski
+      changes:
+        - insert:
+            tableName: role
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: name
+                  value: SIMPLE_CLIENT
+        - insert:
+            tableName: role
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: name
+                  value: SILVER_CLIENT
+        - insert:
+            tableName: role
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: name
+                  value: GOLD_CLIENT

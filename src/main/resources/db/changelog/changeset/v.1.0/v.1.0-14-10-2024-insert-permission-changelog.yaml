@@ -1,0 +1,50 @@
+databaseChangeLog:
+  - changeSet:
+      id: v.1.0-7-insert-permission
+      author: andrei_savitski
+      changes:
+        - insert:
+            tableName: permission
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: name
+                  value: viewMyCards
+        - insert:
+            tableName: permission
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: name
+                  value: openCredit1
+        - insert:
+            tableName: permission
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: name
+                  value: openCredit2
+        - insert:
+            tableName: permission
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: name
+                  value: transferMoneyBetweenYourAccounts
+        - insert:
+            tableName: permission
+            columns:
+              - column:
+                  name: id
+                  value: 5
+              - column:
+                  name: name
+                  value: viewCardBalance

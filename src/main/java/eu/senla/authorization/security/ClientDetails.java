@@ -31,10 +31,8 @@ public class ClientDetails implements UserDetails {
         this.role = client.getRole();
         this.authorities = client.getPermissions()
                 .stream()
-                .map(
-                        role -> new SimpleGrantedAuthority(role.getName()))
-                .collect(Collectors.toList()
-                );
+                .map(role -> new SimpleGrantedAuthority(role.getName()))
+                .collect(Collectors.toList());
     }
 
     @Override

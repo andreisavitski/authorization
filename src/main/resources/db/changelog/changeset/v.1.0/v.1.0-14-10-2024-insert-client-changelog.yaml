@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: v.1.0-10-insert-client
+      author: andrei_savitski
+      changes:
+        - insert:
+            tableName: client
+            columns:
+              - column:
+                  name: id
+                  value: 666
+              - column:
+                  name: login
+                  value: testClient
+              - column:
+                  name: password
+                  value: $2a$10$tkTMVC6.TWzMSSUSl8LIvuoGr3u9iZ7vATRxK1Lv0ycGt.2ZZcZii
+              - column:
+                  name: role_id
+                  value: 1

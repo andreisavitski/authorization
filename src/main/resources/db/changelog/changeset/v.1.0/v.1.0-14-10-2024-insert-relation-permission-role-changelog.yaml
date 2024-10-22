@@ -1,0 +1,113 @@
+databaseChangeLog:
+  - changeSet:
+      id: v.1.0-9-insert-relation-permission-role
+      author: andrei_savitski
+      changes:
+        - insert:
+            tableName: permission_role
+            columns:
+              - column:
+                  name: permission_id
+                  value: 1
+              - column:
+                  name: role_id
+                  value: 1
+        - insert:
+            tableName: permission_role
+            columns:
+              - column:
+                  name: permission_id
+                  value: 4
+              - column:
+                  name: role_id
+                  value: 1
+        - insert:
+            tableName: permission_role
+            columns:
+              - column:
+                  name: permission_id
+                  value: 5
+              - column:
+                  name: role_id
+                  value: 1
+        - insert:
+            tableName: permission_role
+            columns:
+              - column:
+                  name: permission_id
+                  value: 1
+              - column:
+                  name: role_id
+                  value: 2
+        - insert:
+            tableName: permission_role
+            columns:
+              - column:
+                  name: permission_id
+                  value: 2
+              - column:
+                  name: role_id
+                  value: 2
+        - insert:
+            tableName: permission_role
+            columns:
+              - column:
+                  name: permission_id
+                  value: 4
+              - column:
+                  name: role_id
+                  value: 2
+        - insert:
+            tableName: permission_role
+            columns:
+              - column:
+                  name: permission_id
+                  value: 5
+              - column:
+                  name: role_id
+                  value: 2
+        - insert:
+            tableName: permission_role
+            columns:
+              - column:
+                  name: permission_id
+                  value: 1
+              - column:
+                  name: role_id
+                  value: 3
+        - insert:
+            tableName: permission_role
+            columns:
+              - column:
+                  name: permission_id
+                  value: 2
+              - column:
+                  name: role_id
+                  value: 3
+        - insert:
+            tableName: permission_role
+            columns:
+              - column:
+                  name: permission_id
+                  value: 3
+              - column:
+                  name: role_id
+                  value: 3
+        - insert:
+            tableName: permission_role
+            columns:
+              - column:
+                  name: permission_id
+                  value: 4
+              - column:
+                  name: role_id
+                  value: 3
+        - insert:
+            tableName: permission_role
+            columns:
+              - column:
+                  name: permission_id
+                  value: 5
+              - column:
+                  name: role_id
+                  value: 3

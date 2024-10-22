@@ -9,3 +9,15 @@ databaseChangeLog:
       file: db/changelog/changeset/v.1.0/v.1.0-14-10-2024-create-role-table-changelog.yaml
   - include:
       file: db/changelog/changeset/v.1.0/v.1.0-14-10-2024-create-fk-client-role-changelog.yaml
+  - include:
+      file: db/changelog/changeset/v.1.0/v.1.0-14-10-2024-create-permission-role-table-changelog.yaml
+  - include:
+      file: db/changelog/changeset/v.1.0/v.1.0-14-10-2024-insert-permission-changelog.yaml
+  - include:
+      file: db/changelog/changeset/v.1.0/v.1.0-14-10-2024-insert-role-changelog.yaml
+  - include:
+      file: db/changelog/changeset/v.1.0/v.1.0-14-10-2024-insert-relation-permission-role-changelog.yaml
+  - include:
+      file: db/changelog/changeset/v.1.0/v.1.0-14-10-2024-insert-client-changelog.yaml
+  - include:
+      file: db/changelog/changeset/v.1.0/v.1.0-14-10-2024-insert-relation-permission-client-changelog.yaml

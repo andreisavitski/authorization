@@ -15,8 +15,8 @@ public enum ApplicationError implements AppError, Supplier<ApplicationException>
 
     THE_CLIENT_EXISTS(BAD_REQUEST, "The client is already registered");
 
-
     private final HttpStatus status;
+
     private final String code;
 
     ApplicationError(HttpStatus status, String code) {
