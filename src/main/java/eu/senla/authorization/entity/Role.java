@@ -6,6 +6,7 @@ import lombok.Data;
 import java.util.List;
 
 import static jakarta.persistence.CascadeType.REMOVE;
+import static jakarta.persistence.FetchType.EAGER;
 import static jakarta.persistence.GenerationType.IDENTITY;
 
 @Data
@@ -23,4 +24,10 @@ public class Role {
 
     @OneToMany(mappedBy = "role", cascade = REMOVE)
     private List<Client> clients;
+
+    @ManyToMany(fetch = EAGER)
+    @JoinTable(name = "permission_role",
+            joinColumns = @JoinColumn(name = "role_id"),
+            inverseJoinColumns = @JoinColumn(name = "permission_id"))
+    private List<Permission> permissions;
 }

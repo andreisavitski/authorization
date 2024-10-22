@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: v.1.0-9-insert-relation-permission_client
+      author: andrei_savitski
+      changes:
+        - insert:
+            tableName: permission_client
+            columns:
+              - column:
+                  name: permission_id
+                  value: 1
+              - column:
+                  name: client_id
+                  value: 666
+        - insert:
+            tableName: permission_client
+            columns:
+              - column:
+                  name: permission_id
+                  value: 4
+              - column:
+                  name: client_id
+                  value: 666
+        - insert:
+            tableName: permission_client
+            columns:
+              - column:
+                  name: permission_id
+                  value: 5
+              - column:
+                  name: client_id
+                  value: 666

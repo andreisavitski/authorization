@@ -4,6 +4,7 @@ import eu.senla.authorization.dto.security.JwtAuthenticationResponseDto;
 import eu.senla.authorization.dto.security.SignInRequestDto;
 import eu.senla.authorization.dto.security.SignUpRequestDto;
 import eu.senla.authorization.entity.Client;
+import eu.senla.authorization.entity.Role;
 import eu.senla.authorization.exception.ApplicationException;
 import eu.senla.authorization.mapper.ClientMapper;
 import eu.senla.authorization.repository.ClientRepository;
@@ -44,9 +45,11 @@ public class ClientServiceImpl implements ClientService {
     @Override
     public JwtAuthenticationResponseDto signUp(SignUpRequestDto request) {
         Client client = clientMapper.toClient(checkingUniqueLogin(request));
-        client.setRole(roleRepository.findByName(SIMPLE_CLIENT).orElseThrow(
+        Role role = roleRepository.findByName(SIMPLE_CLIENT).orElseThrow(
                 () -> new ApplicationException(ROLE_NOT_FOUND)
-        ));
+        );
+        client.setRole(role);
+        client.setPermissions(role.getPermissions());
         client.setPassword(passwordEncoder.encode(request.getPassword()));
         clientRepository.save(client);
         ClientDetails clientDetails = new ClientDetails(client);

@@ -22,4 +22,7 @@ public class Permission {
 
     @ManyToMany(mappedBy = "permissions")
     private List<Client> clients;
+
+    @ManyToMany(mappedBy = "permissions")
+    private List<Role> roles;
 }

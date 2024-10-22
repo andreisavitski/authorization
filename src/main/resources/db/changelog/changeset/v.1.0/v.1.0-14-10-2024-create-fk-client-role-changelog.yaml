@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: v.1.0-6-create-fk-client-role
+      id: v.1.0-5-create-fk-client-role
       author: andrei_savitski
       changes:
         - addForeignKeyConstraint:
